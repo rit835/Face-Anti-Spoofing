@@ -8,8 +8,8 @@ import cv2
 protoPath =  "deploy.prototxt"
 modelPath =  "res10_300x300_ssd_iter_140000.caffemodel"
 net = cv2.dnn.readNetFromCaffe(protoPath, modelPath)
-model = load_model("livenessm.model")
-le = pickle.loads(open("livenessp.pickle", "rb").read())
+model = load_model("live.model")
+le = pickle.loads(open("live.pickle", "rb").read())
 vs = VideoStream(src=0).start()
 while True:
     frame = vs.read()
